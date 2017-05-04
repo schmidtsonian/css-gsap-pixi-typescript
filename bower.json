@@ -1,0 +1,24 @@
+{
+  "name": "spotify-playlist",
+  "version": "0.0.1",
+  "main": "",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "gsap": "1.12.1",
+    "jso": "^2.0.3",
+    "pixi.js": "^4.5.1"
+  },
+  "overrides": {
+    "gsap": {
+      "main": [
+        "./src/uncompressed/TweenMax.js",
+        "./src/uncompressed/plugins/ScrollToPlugin.js"
+      ]
+    },
+    "jso": {
+      "main": [
+        "./build/jso.js"
+      ]
+    }
+  }
+}

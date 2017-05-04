@@ -1,0 +1,35 @@
+@mixin xs-devices-only {
+    @media (max-width: #{$SM_MIN_WIDTH - 1}) {
+        @content;
+    }
+}
+
+@mixin xs-devices {
+    @media (min-width: #{$XS_MAX_WIDTH}) {
+        @content;
+    }
+}
+
+@mixin sm-devices {
+    @media (min-width: #{$SM_MIN_WIDTH}) {
+        @content;
+    }
+}
+
+@mixin sm-devices-only {
+    @media (min-width: #{$SM_MIN_WIDTH}) and (max-width: #{$MD_MIN_WIDTH - 1}) {
+        @content;
+    }
+}
+
+@mixin md-devices {
+    @media (min-width: #{$MD_MIN_WIDTH}) {
+        @content;
+    }
+}
+
+@mixin lg-devices {
+    @media (min-width: #{$LG_MIN_WIDTH}) {
+        @content;
+    }
+}
