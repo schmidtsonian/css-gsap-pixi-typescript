@@ -3,3 +3,10 @@
 .h-abs-center-bottom { @include abs-center-bottom; }
 .h-abs-center-right  { @include abs-center-right;  }
 .h-abs-center-left   { @include abs-center-left;   }
+
+.h-abs-left-top   { @include abs-left-top;   }
+
+.h-abs-left-bottom   { @include abs-left-bottom;   }
+.h-abs-right-bottom   { @include abs-right-bottom;   }
+
+.h-abs-right-top   { @include abs-right-top;   }

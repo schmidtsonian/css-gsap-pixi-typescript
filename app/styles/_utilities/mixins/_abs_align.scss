@@ -17,6 +17,39 @@
     margin: auto;
 }
 
+
+@mixin abs-left-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: auto;
+}
+
+
+@mixin abs-left-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+}
+
+@mixin abs-right-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    margin: auto;
+}
+@mixin abs-right-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: auto;
+}
+
 @mixin abs-center-left {
     position: absolute;
     top: 0;
