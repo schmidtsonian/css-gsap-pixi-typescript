@@ -1,0 +1,140 @@
+//TODO: fix this!
+@import 
+    '../../_abstract';
+
+html, body {
+    background-color: $GREEN;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-family: $FONT;
+}
+
+.gradient{
+    width: 30%;
+    height: 90%;
+    background-image: radial-gradient(50% 50%, rgba(242,242,242,0.16) 42%, #48B868 79%);
+}
+
+/* header */
+.header{
+   width: 100%;
+   height: 40px;
+   transform: translateY( -128px );
+}
+.header__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: $WHITE;
+    position: relative;
+    sup{
+        font-size: .3em;
+        top: -20px;
+        position: relative;
+        left: -8px;
+    }
+}
+/* clouds */
+.clouds {
+    width: 480px;
+    height: 207px;
+    top: 80px;
+}
+.cloud {
+    height: 25px;
+    background: $WHITE;
+    border-radius: 100px;
+}
+.cloud-a {
+    width: 90px;
+    height: 75px;
+    span{
+        position: absolute;
+        &:nth-child(1){
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4){
+            width: 60%;
+        }
+        &:nth-child(3),
+        &:nth-child(2){
+            top: 25px;
+        }
+        &:nth-child(2){
+            right: 5px;
+        }
+        &:nth-child(3) {
+            background-color: $GREEN;
+            left: 15px;
+        }
+        &:nth-child(4){
+            right: 0;
+            bottom: 0;
+        }
+    } 
+}
+.cloud-b {
+    width: 32px;
+    right: 11px;
+}
+.cloud-c {
+    width: 90px;
+    height: 75px;
+    bottom: 67px;
+    span{
+        position: absolute;
+        &:nth-child(1){
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        &:nth-child(2){
+            width: 40%;
+            top: 25px;
+            left: 0;
+        }
+        &:nth-child(3){
+            width: 82%;
+            top: 25px;
+            right: 0;
+            background-color: $GREEN;
+        }
+        &:nth-child(4){
+            width: 70%;
+            bottom: 0;
+            left: 0;
+        }
+        
+    } 
+}
+.cloud-e{
+    width: 60px;
+    left: 59px;
+}
+.cloud-d {
+    width: 180px;
+    bottom: 25px;
+    right: 97px;
+}
+
+
+/* canvas */
+.frame {
+    overflow: hidden;
+    width: 325px;
+    height: 152px;
+    background-image: linear-gradient(-1deg, #FFFFFF 0%, #DEEDAF 99%);
+    box-shadow: -6px 6px 0 0 rgba(0,0,0,0.50);
+    canvas{
+        position: relative;
+        left: -25px;
+    }
+}
