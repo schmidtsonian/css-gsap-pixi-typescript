@@ -141,7 +141,7 @@ gulp.task('scripts', () => {
                 module: 'amd'
     	    }
         ))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(path.scripts.dest))
         .pipe(connect.reload());
