@@ -3,7 +3,6 @@
     '../../_abstract';
 
 html, body {
-    background-color: $GREEN;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -13,11 +12,18 @@ html {
     font-family: $FONT;
 }
 
+.bg{
+    background-color: $GREEN;
+    width: 100%;
+    height: 100%;
+}
+
 .gradient{
     width: 30%;
     height: 90%;
     background-image: radial-gradient(50% 50%, rgba(242,242,242,0.16) 42%, #48B868 79%);
 }
+
 
 /* header */
 .header{
@@ -37,7 +43,13 @@ html {
         position: relative;
         left: -8px;
     }
+    span {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
+
 /* clouds */
 .clouds {
     width: 480px;
@@ -88,7 +100,7 @@ html {
 .cloud-c {
     width: 90px;
     height: 75px;
-    bottom: 67px;
+    bottom: 68px;
     span{
         position: absolute;
         &:nth-child(1){
@@ -115,14 +127,20 @@ html {
         
     } 
 }
-.cloud-e{
-    width: 60px;
-    left: 59px;
-}
 .cloud-d {
     width: 180px;
     bottom: 25px;
     right: 97px;
+}
+.cloud-e{
+    width: 40px;
+    left: 141px;
+    bottom: 25px;
+}
+
+.cloud-f{
+    width: 60px;
+    left: 59px;
 }
 
 
@@ -137,4 +155,24 @@ html {
         position: relative;
         left: -25px;
     }
+}
+
+/*bear*/
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.bear{
+    width: 60px;
+    height: 35px;
+    top: -30px;
+}
+.icon-bear{
+    width: 100%;
+    height: 100%;
 }

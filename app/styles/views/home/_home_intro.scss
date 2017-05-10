@@ -1,0 +1,157 @@
+//TODO: fix this!
+@import 
+    '../../_abstract';
+
+
+// From
+
+.gradient,
+.header__title span,
+.frame,
+.cloud-a,
+.cloud-b,
+.cloud-c,
+.cloud-d,
+.cloud-e,
+.cloud-f {
+    opacity: 0;
+}
+
+
+.bg{
+    background-color: $WHITE;
+}
+
+.header__title span {
+    transform: translateY(-200px);
+}
+
+.frame {
+    height: 0;
+    transform: translateX(-6px) translateY(-6px);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.50);
+}
+.gradient {
+    transform: scale(.2);
+}
+
+.cloud-a {
+    transform: translateX(200px);
+}
+.cloud-b {
+    transform: translateX(-80px);
+    width: 18px;
+}
+
+.cloud-c {
+    transform: translateX(-200px);
+}
+
+.cloud-d {
+    transform: translateX(20px);
+    width: 80px;
+}
+.cloud-e {
+    transform: translateX(80px);
+    width: 15px;
+}
+.cloud-f {
+    width: 15px;
+}
+
+.bear {
+    top: -200px;
+}
+
+@keyframes BEAR_SURFING {
+  0%   { transform: rotate(0) translateY(0px); }
+  15%   { transform: rotate(2deg) translateY(-3px); }
+  35%   { transform: rotate(0) translateY(1px); }
+  50%   { transform: rotate(-1deg) translateY(0px); }
+  65%   { transform: rotate(-3deg) translateY(2px); }
+  85%   { transform: rotate(1deg) translateY(-1px); }
+  100%   { transform: rotate(0) translateY(0); }
+}
+
+// To
+@include document-loaded {
+
+    .bg{
+        transition: background 1.45s $EASE_OUT_CUBIC 0.25s;
+        background-color: $GREEN;
+    }
+
+    .header__title span {
+        opacity: 1;
+        transform: translateY(0);
+
+        @for $i from 1 through 5 {
+
+            &:nth-child(#{$i}){
+                transition: opacity calc(1s * #{$i + .25}) $EASE_IN_OUT_CUBIC calc(0.15s * #{$i}), transform calc(0.45s * #{$i + .25}) $EASE_IN_OUT_BACK calc(0.03s * #{$i - .25});;
+                
+            }
+        }
+    }
+
+    .frame {
+        transition: height 1.25s $AUTHENTIC_MOTION 1.2s, box-shadow .5s $EASE_OUT_CUBIC 1.75s, transform .75s $AUTHENTIC_MOTION .75s;
+        opacity: 1;
+        height: 152px;
+        box-shadow: -6px 6px 0 0 rgba(0,0,0,0.50);
+        transform: translateX(0) translateY(0);
+    }
+
+    .gradient {
+        transition: opacity 2.45s $EASE_IN_OUT_CUBIC 1.5s, transform 2.45s $EASE_IN_OUT_CUBIC 1.5s;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .cloud-a, .cloud-b, .cloud-c, .cloud-d, .cloud-e, .cloud-f {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .cloud-a,
+    .cloud-c {
+        transition: opacity 0s $EASE_OUT_CUBIC, transform 2s $EASE_OUT_CUBIC;
+    }
+    .cloud-a {
+        transition-delay: 2s
+    }
+
+    .cloud-b {
+        transition: opacity 0s $EASE_OUT_CUBIC, transform 2.6s $EASE_OUT_CUBIC, width 2.6s $EASE_OUT_CUBIC;
+        transition-delay: 2.2s;
+        width: 32px;
+    }
+
+    .cloud-c {
+        transition-delay: 2.3s
+    }
+    .cloud-d {
+        transition: opacity .25s $EASE_OUT_CUBIC, transform 2.5s $EASE_OUT_CUBIC, width 2.5s $EASE_OUT_CUBIC;
+        transition-delay: 1.6s;
+        width: 180px;
+    }
+
+    .cloud-e {
+        transition: opacity .25s $EASE_OUT_CUBIC, transform 2s $EASE_OUT_CUBIC, width 2s $EASE_OUT_CUBIC;
+        transition-delay: 2.8s;
+        width: 40px;
+    }
+
+    .cloud-f {
+        transition: opacity .25s $EASE_OUT_CUBIC, width 3s $EASE_OUT_CUBIC;
+        transition-delay: 2s;
+        width: 60px;
+    }
+
+    .bear{
+        animation: BEAR_SURFING 3s infinite;
+        transition: top .55s $EASE_OUT_BACK 4s;
+        top: -30px;
+    }
+}
+
+

@@ -1,0 +1,6 @@
+@mixin document-loaded {
+    
+    body.is-loaded {
+        @content;
+    }
+}

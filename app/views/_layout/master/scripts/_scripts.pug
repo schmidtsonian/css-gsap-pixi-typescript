@@ -1,4 +1,5 @@
 script.
+
     function loadScript(src, callback) {
         let s, r, t; r = false;
 
@@ -16,6 +17,8 @@ script.
         t.parentNode.insertBefore(s, t);
     }
 
-    loadScript('#{PATH}/js/vendor.js', () => {
-        loadScript('#{PATH}/js/main.js', () => {})
-    });
+    (function(){
+        loadScript('#{PATH}/js/vendor.js', () => { loadScript('#{PATH}/js/main.js', () => {}); });
+        
+        document.body.className += " " + 'is-loaded';
+    })();
