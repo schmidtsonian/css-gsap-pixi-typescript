@@ -17,8 +17,8 @@ script.
         t.parentNode.insertBefore(s, t);
     }
 
-    (function(){
+    ( () => {
         loadScript('#{PATH}/js/vendor.js', () => { loadScript('#{PATH}/js/main.js', () => {}); });
         
-        document.body.className += " " + 'is-loaded';
-    })();
+        setTimeout( () => { document.body.className += " " + 'is-loaded'; }, 250);
+    } )();
